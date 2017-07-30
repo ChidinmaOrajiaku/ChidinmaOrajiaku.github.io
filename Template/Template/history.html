@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-	<title>Fictional</title>
+	<title>Borrowing History</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/fonts">
@@ -10,10 +10,22 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <link  href="http://fonts.googleapis.com/css?family=Pacifico:regular" rel="stylesheet" type="text/css">
    <link  href="http://fonts.googleapis.com/css?family=Acme:regular" rel="stylesheet" type="text/css">
-   <link  href="http://fonts.googleapis.com/css?family=Roboto+Condensed:regular" rel="stylesheet" type="text/css">
 
 
-   <style type="text/css"> 
+   <style type="text/css">
+
+       .container-fluid .icon {
+           display: none;
+        }
+
+       @media screen and (max-width: 600px) {
+         .container-fluid a:not(:first-child) {display: none;}
+       .container-fluid a.icon {
+         float: right;
+         display: block;
+       }
+     }
+
         table {
           border-collapse: collapse;
          border-spacing: 0;
@@ -39,30 +51,26 @@
 		text-decoration: none;
 	}
 
-	button{
-		float: right;
-		margin-top: 30px;
-		font-size: 20px;
-    	background-color: orange;
-    	border-radius: 10px;
-    	box-shadow: 0px 15px 25px silver;
-    	outline: none;
-    	width: 70px;
-    	font-family: Pacifico;
-	}
-
-	button:hover{
-		background-color: #763626;
-		color: orange;
-	}
    </style>
 </head>
 <body>
 	
+<script type="text/javascript">
+  
+  function myFunction() {
+    var x = document.getElementById("myNavbar");
+    if (x.className === "container-fluid") {
+        x.className += " responsive";
+    } else {
+        x.className = "navbar";
+    }
+}
+
+</script>
+
 	<nav class="navbar navbar-inverse navbar-fixed-top">
-             <div class="container-fluid">
+             <div class="container-fluid" id="myNavbar">
                  <ul class="nav navbar-nav">
-                     <li><i class="fa fa-phone" aria-hidden="true" style="font-size: 30px; margin-left: 50px; margin-top: 11px; color: white;"></i><a href="#" style="font-size: 20px; font-family: Pacifico;">Hello Books</a></li>
                      <li style="font-size: 20px;"><i class="fa fa-home" aria-hidden="true" style="margin-left: 30px; font-size: 30px; color: white; margin-top: 8px;"></i><a href="#">Home</a></li>
                      <li class="dropdown">
                          <i class="fa fa-book" aria-hidden="true" style="font-size: 30px; color: white; margin-left: 40px; margin-top: 10px;"></i><a href="#" style="font-size: 20px;">Library</a>
@@ -75,120 +83,83 @@
                          </ul>
                      </li>
                      <li><i class="fa fa-user-circle" aria-hidden="true" style="font-size: 30px; margin-left: 30px; margin-top: 11px; color: white"></i><a href="#" style="font-size: 20px;">Profile</a></li>
-                     <li style="margin-left: 800px; font-size: 20px;"><i class="fa fa-cart-plus" aria-hidden="true" style="font-size: 30px; margin-left: 15px; margin-top: 10px; color: white;"></i> <a href="">Cart</li></a> 
+                     <li style="margin-left: 800px; font-size: 20px;"><i class="fa fa-cart-plus" aria-hidden="true" style="font-size: 30px; margin-left: 15px; margin-top: 10px; color: white;"></i> <a href="">Cart</li></a>
                      <li style=" font-size: 20px;"><i class="fa fa-hand-o-left" aria-hidden="true" style="font-size: 30px; margin-left: 30px; margin-top: 10px; color: white;"></i> <a href="">Log Out</li></a>
                   </ul>
               </div>
          </nav>
 
-	<div class="container" style="margin-top: 100px;">
-
-	     <h1 class="text-center"> A</h1>
+	<div class="container" style="margin-top: 130px;">
 	     <table>
     <tr>
       <th>Author</th>
       <th>Title</th>
-      <th>Status</th>
-      <th>Borrow</th>
+      <th>Date Borrowed</th>
+      <th>Date Returned</th>
     </tr>
     <tr>
       <td>Anne Rice</td>
       <td>Interview with the vampire</td>
-      <td>Available</td>
-      <td><a href="">Add to Cart</a></td>
+      <td>2-Jan-2017</td>
+      <td>17-Jan-2017</td>
     </tr>
     <tr>
       <td>Anne Rice</td>
       <td>The Queen of the damned</td>
-      <td>Available</td>
-      <td><a href="">Add to Cart</a></td>
+      <td>4-Jan-2017</td>
+      <td>8-Jan-2017</td>
     </tr>
     <tr>
       <td>Anne Rice</td>
       <td>The wolf gift</td>
-      <td>Available</td>
-      <td><a href="">Add to Cart</a></td>
+      <td>3-Feb-2017</td>
+      <td>5-Feb-2017</td>
     </tr>
     <tr>
       <td>Agatha Christie</td>
       <td>And then there were..</td>
-      <td>Available</td>
-      <td><a href="">Add to Cart</a></td>
+      <td>3-Feb-2017</td>
+      <td>7-Feb-2017</td>
     </tr>
     <tr>
       <td>Agatha Christie</td>
       <td>The Mysterious</td>
-      <td>Available</td>
-      <td><a href="">Add to Cart</a></td>
+      <td>17-Feb-2017</td>
+      <td>20-Feb-2017</td>
     </tr>
-  </table>
 
-  <h1 class="text-center"> B</h1>
-  <table>
-  <tr>
-      <th>Author</th>
-      <th>Title</th>
-      <th>Status</th>
-      <th>Borrow</th>
     </tr>
     <tr>
       <td>Babara Delinsky</td>
       <td>Not my daughter</td>
-      <td>Available</td>
-      <td><a href="">Add to Cart</a></td>
+      <td>3-Mar-2017</td>
+      <td>15-March-2017</td>
     </tr>
     <tr>
-      <td>Babara Delinsky</td>
-      <td>The secret between us</td>
-      <td>Available</td>
-      <td><a href="">Add to Cart</a></td>
-    </tr>
-    <tr>
-      <td>Beatrice Potter</td>
-      <td>The tale of Peter rabbit</td>
-      <td>Available</td>
-      <td><a href="">Add to Cart</a></td>
-    </tr>
     <tr>
       <td>Beatrice Potter</td>
       <td>The complete tales</td>
-      <td>Available</td>
-      <td><a href="">Add to Cart</a></td>
-    </tr>
-  </table>
-  <h1 class="text-center"> C </h1>
-      <table>
-		<tr>
-      <th>Author</th>
-      <th>Title</th>
-      <th>Status</th>
-      <th>Borrow</th>
+      <td>20-March-2017</td>
+      <td>31-Mar-2017</td>
     </tr>
     <tr>
       <td>Corin Tellado</td>
       <td>Lección de amor</td>
-      <td>Available</td>
-      <td><a href="">Add to Cart</a></td>
-    </tr>
-    <tr>
-      <td>C.S Lewis</td>
-      <td>Chronicles of Narnia</td>
-      <td>Not available</td>
+      <td>31-March-2017</td>
+      <td>4-April-2017</td>
     </tr>
     <tr>
       <td>Clive Cussler</td>
       <td>Zero Hour</td>
-      <td>Available</td>
-      <td><a href="">Add to Cart</a></td>
+      <td>2-June-2017</td>
+      <td>16-June-2017</td>
     </tr>
     <tr>
       <td>Clive Cussler</td>
       <td>Ghost ship</td>
-      <td>Available</td>
-      <td><a href="">Add to Cart</a></td>
+      <td>3-July-2017</td>
+      <td>10-July-2017</td>
     </tr>
   </table>
-
-    <button>Next</button>
 	</div>
 </body>
