@@ -1,11 +1,10 @@
 <!DOCTYPE html>
+<html>
 <head>
 	<title>User login page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js'></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <link  href="http://fonts.googleapis.com/css?family=Pacifico:regular" rel="stylesheet" type="text/css">
@@ -49,6 +48,8 @@
       background-repeat: no-repeat;
       z-index: -1;
       background-size: cover;
+      height: 200%;
+      width: 100%
     }
 
     .navbar{
@@ -62,6 +63,19 @@
       height: 300px;
     }
 
+    a{
+      color: white;
+    }
+
+    a:hover{
+      text-decoration: none;
+      background-color: white;
+      color: orange;
+    }
+
+    li{
+       padding-top: 10px;
+    }
 
    </style>
 
@@ -69,25 +83,33 @@
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
-             <div class="container-fluid">
-                 <ul class="nav navbar-nav">
-                     <li><i class="fa fa-phone" aria-hidden="true" style="font-size: 30px; margin-left: 50px; margin-top: 11px; color: white;"></i><a href="#" style="font-size: 20px; font-family: Pacifico;">Hello Books</a></li>
-                     <li style="font-size: 20px;"><i class="fa fa-home" aria-hidden="true" style="margin-left: 30px; font-size: 30px; color: white; margin-top: 8px;"></i><a href="#">Home</a></li>
-                     <li class="dropdown">
-                         <i class="fa fa-book" aria-hidden="true" style="font-size: 30px; color: white; margin-left: 40px; margin-top: 10px;"></i><a href="library.html" style="font-size: 20px;">Library</a>
-                     </li>
-                     <li><i class="fa fa-history" aria-hidden="true" style="margin-left: 40px; font-size: 30px; color: white; margin-top: 10px;"></i><a href="history.html" style="font-size: 20px;">History<span class="caret"></span></a></li>
-                     </li>
-                     <li><i class="fa fa-user-circle" aria-hidden="true" style="font-size: 30px; margin-left: 30px; margin-top: 11px; color: white"></i><a href="profile.html" style="font-size: 20px;">Profile</a></li>
-                     <li style="margin-left: 800px; font-size: 20px;"><i class="fa fa-cart-plus" aria-hidden="true" style="font-size: 30px; margin-left: 15px; margin-top: 10px; color: white;"></i> <a href="">Cart</li></a> 
-                     <li style=" font-size: 20px;"><i class="fa fa-hand-o-left" aria-hidden="true" style="font-size: 30px; margin-left: 30px; margin-top: 10px; color: white;"></i> <a href="loginpage.html">Log Out</li></a>
-                  </ul>
-              </div>
-         </nav>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>          
+      </button>
+      <a href="#" class="navbar-brand" style="font-size: 30px; font-family: Pacifico; padding-top: 20px;">Hello Books</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li style="font-family: Acme; font-size: 20px;"><a href="#">Home</a></li>
+        <li style="font-family: Acme; font-size: 20px;"><a href="library.html">Library</a></li>
+        <li style="font-family: Acme; font-size: 20px;"><a href="history.html">History</a></li>
+        <li  style="font-family: Acme; font-size: 20px;"><a href="profile.html">Profile</a></li>
+        <li  style="font-family: Acme; font-size: 20px;"><a href="admin.html">Admin</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="loginpage.html" style="font-family: Acme; font-size: 20px;"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
    
    <div class="container col-md-offset-4 col-md-4">
-   <div class="well">
+   <div class="well col-md-6">
        <div  class = "text-center" style="font-size: 80px; font-color: white; color: #763626;"><p style="color: orange;">HelloBooks</p></div>
        <button type="button" class="signIn" data-toggle="modal" data-target="#myModal" style="background-color:#FF8C00; color: white; font-family: Pacifico;">Sign In</button>
        <button type="button" class="signUp" data-toggle="modal" data-target="#myModal2" style="background-color:   #FF4500; color: white; font-family: Pacifico; ">Sign Up</button>
@@ -101,14 +123,14 @@
                <div class="modal-body">
                  <button type="button" class="close" data-dismiss="modal" style="font-size: 50px;">&times;</button>
                  <form style="font-size: 30px; margin-left: 20px">
-                     <p style="margin-top: 30px; font-family: Acme;">Username: <input type="text" name="   username" style="font-size: 30px;"> <br></p>
+                     <p style="margin-top: 30px; font-family: Acme;">Username: <input type="text" name="username" required="required" style="font-size: 30px;"> <br></p>
 
-                     <p style="margin-top: 30px; font-family: Acme;"> Password: <input type="text" name="password" style="font-size: 30px;"></p>
+                     <p style="margin-top: 30px; font-family: Acme;"> Password: <input type="text" name="password" required="required" style="font-size: 30px;"></p>
                  </form>
               </div>
               <div class="modal-footer">
                  <a href="" style="float: left; font-family: Acme; font-size: 20px;">Forgot Password</a>
-                 <button type="button" class="login" data-dismiss="modal" style="border-radius: 20%; background-color: #FF4500; font-size: 20px; color: white; box-shadow:  0px 3px 0px 0px #303030; font-family: Acme;">Login</button>
+                 <button type="button" class="login" style="border-radius: 20%; background-color: #FF4500; font-size: 20px; box-shadow:  0px 3px 0px 0px #303030; font-family: Acme;"><a href="library.html">Login</a></button>
                </div>
           </div>
            
@@ -123,16 +145,16 @@
                <div class="modal-body">
                    <button type="button" class="close" data-dismiss="modal" style="font-size: 50px;">&times;</button>
                      <form style="font-size: 30px; margin-left: 20px;">
-                       <p style="margin-top: 30px; font-family: Acme;">First Name: <br><input type="text" name="username" style="font-size: 30px;"></p>
-                       <p style="margin-top: 30px; font-family: Acme;">Other Name: <br><input type="text" name="othername" style="font-size: 30px;"></p>
-                       <p style="margin-top: 30px; font-family: Acme;">Email: <br><input type="text" name="username" style="font-size: 30px;"></p>
+                       <p style="margin-top: 30px; font-family: Acme;">First Name: <br><input type="text" name="username" required="required" style="font-size: 30px;"></p>
+                       <p style="margin-top: 30px; font-family: Acme;">Other Name: <br><input type="text" required="required" name="othername" style="font-size: 30px;"></p>
+                       <p style="margin-top: 30px; font-family: Acme;">Email: <br><input type="text" name="username" required="required" style="font-size: 30px;"></p>
 
-                       <p style="margin-top: 30px; font-family: Acme;"> Password: <br><input type="text" name="password" style="font-size: 30px;"></p>
-                       <p style="margin-top: 30px; font-family: Acme;">Confirm Password: <br><input type="text" name="username" style="font-size: 30px;"></p>
+                       <p style="margin-top: 30px; font-family: Acme;"> Password: <br><input type="text" name="password" required="required" style="font-size: 30px;"></p>
+                       <p style="margin-top: 30px; font-family: Acme;">Confirm Password: <br><input type="text" name="username" required="required" style="font-size: 30px;"></p>
                     </form>
                </div>
                <div class="modal-footer">
-                 <button type="button" class="login" data-dismiss="modal" style="border-radius: 20%; background-color: #FF4500; font-size: 20px; color: white; box-shadow:  0px 3px 0px 0px #303030; font-family: Acme;">Way to go!</button>
+                 <button type="button" class="login" style="border-radius: 20%; background-color: #FF4500; font-size: 20px; box-shadow:  0px 3px 0px 0px #303030; font-family: Acme;"><a href="library.html">Way to go!</a></button>
               </div>
       </div>
            
@@ -142,3 +164,4 @@
    </div>
 
 </body>
+</html>
